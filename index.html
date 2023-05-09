@@ -4,12 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/">
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="icon" href="img/logo.svg">
     <title>Jogo da Memória</title>
   </head>
   <body>
+    <div class="header">
+
+      <!--Content before waves-->
+        <div class="inner-header">
+          <!--Just the logo.. Don't mind this-->
+          <div class="titulo flex">
+            <img class="logo" src="img/logo.svg">
+            <h1>Jogo da Memória</h1>
+          </div>
+          <div class="linha"></div>
+          <div>
+            <div id="formContent">
+              <!-- ANCHOR - Login Form -->
+              <form>
+                <div class="form-control">
+                  <input type="value" required="">
+                  <label>
+                    <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span
+                      style="transition-delay:100ms">m</span><span style="transition-delay:150ms">e</span><span
+                      style="transition-delay:200ms"> </span><span style="transition-delay:250ms">d</span><span
+                      style="transition-delay:300ms">o</span><span style="transition-delay:350ms"> </span>
+                    <span style="transition-delay:400ms">J</span><span style="transition-delay:450ms">o</span><span
+                      style="transition-delay:500ms">g</span><span style="transition-delay:550ms">a</span><span
+                      style="transition-delay:600ms">d</span><span style="transition-delay:650ms">o</span><span
+                      style="transition-delay:700ms">r</span>
+                  </label>
+                </div>
+                <input type="submit" class="fadeIn fourth" value="Jogar">
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+
+    </div>
+    <!--Header ends-->
+
+    <!--Content starts-->
+    <div class="content flex">
+      <p><a href="https://github.com/KAYOKG/Jogo-da-Memoria" target="_blank"><img class="github" src="img/github.svg"></a></p>
+    </div>
 
   </body>
-  <script src="controleDoGame.js"></script>
+  <script src="index.js"></script>
+
 </html>
