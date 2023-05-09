@@ -55,14 +55,7 @@ p {
 }
 
 /* ANCHOR - Area de login */
-.linha{
-  width: 520px;
-  height: 0;
-  border: 1px solid #ffffff;
-}
 
-
-/* STRUCTURE */
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
@@ -176,11 +169,23 @@ input[type=submit]:active {
   max-height: 150px;
 }
 
+footer {
+  background-color: white;
+  height: 20.4vh;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 .content {
-  position: relative;
-  height: 20vh;
   text-align: center;
   background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 /* Animation */
