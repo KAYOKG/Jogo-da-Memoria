@@ -134,3 +134,49 @@ footer{
     font-size: 24px;
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.card{
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: green;
+  border-radius: 5px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+}
+.face{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  border-radius: 5px;
+}
+.front{
+  
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transform: rotateY(180deg);
+}
+.back{
+  background-image: url(img/CartasDoBaralho/versoCarta.svg);
+  background-size: cover;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.reveal-card{
+  transform: rotateY(180deg);
+}
+
+.disabled-card{
+  filter: saturate(0);
+  opacity: 0.5;
+}
