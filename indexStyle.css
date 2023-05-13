@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 *{
   padding: 0;
@@ -121,7 +121,7 @@ p {
   transform: translateY(-30px);
 }
 
-input[type=submit] {
+button {
   background-color: #56baed;
   border: none;
   color: white;
@@ -143,11 +143,7 @@ input[type=submit] {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=submit]:hover {
-  background-color: #39ace7;
-}
-
-input[type=submit]:active {
+button:hover {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);

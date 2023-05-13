@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexStyle.css">
     <link rel="icon" href="img/logo.svg">
+    <script defer src="index.js"></script>
     <title>Jogo da Memória</title>
   </head>
   <body>
@@ -21,9 +22,9 @@
           <div class="entrada">
             <div id="formContent">
               <!-- ANCHOR - Login Form -->
-              <form action="game.html" method="get">
+              <form action="game.html" method="get" class="resultadoForm">
                 <div class="form-control">
-                  <input type="value" required="" id="myInput">
+                  <input type="text" required="" class="myInput">
                   <label>
                     <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span
                       style="transition-delay:100ms">m</span><span style="transition-delay:150ms">e</span><span
@@ -35,7 +36,7 @@
                       style="transition-delay:700ms">r</span>
                   </label>
                 </div>
-                <button class="fadeIn fourth" onclick="armazenarValor()">Jogar</button>
+                <button type="submit" class="login_button">Jogar</button>
                 <script src="index.html">
                 </script>
               </form>
@@ -68,11 +69,10 @@
     <!--Content starts-->
     <footer>
       <div class="content">
-        <p><a href="https://github.com/KAYOKG/Jogo-da-Memoria" target="_blank"><img class="github" src="img/github.svg"></a>
+        <p><a href="https://github.com/KAYOKG" target="_blank"><img class="github" src="img/github.svg"></a>
         </p>
       </div>
     </footer>
 
   </body>
-  <script src="index.js"></script>
 </html>
