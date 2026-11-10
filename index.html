@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="indexStyle.css">
     <link rel="icon" href="img/logo.svg">
     <script defer src="index.js"></script>
-    <title>Jogo da Memória</title>
+    <title>Jogo da Memória — escolha seu nível</title>
+    <meta name="description" content="Treine sua memória com cartas de baralho. Escolha entre três níveis e tente superar seu recorde.">
   </head>
   <body>
     <div class="header">
 
       <!--Content before waves-->
-        <div class="inner-header">
+        <main class="inner-header">
           <!--Just the logo.. Don't mind this-->
           <div class="titulo flex">
-            <img class="logo" src="img/logo.svg">
+            <img class="logo" src="img/logo.svg" alt="">
             <h1>Jogo da Memória</h1>
           </div>
           <div class="entrada">
@@ -24,31 +25,32 @@
               <!-- ANCHOR - Login Form -->
               <form action="game.html" method="get" class="resultadoForm">
                 <div class="form-control">
-                  <input type="text" required="" class="myInput">
-                  <label>
-                    <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span
-                      style="transition-delay:100ms">m</span><span style="transition-delay:150ms">e</span><span
-                      style="transition-delay:200ms"> </span><span style="transition-delay:250ms">d</span><span
-                      style="transition-delay:300ms">o</span><span style="transition-delay:350ms"> </span>
-                    <span style="transition-delay:400ms">J</span><span style="transition-delay:450ms">o</span><span
-                      style="transition-delay:500ms">g</span><span style="transition-delay:550ms">a</span><span
-                      style="transition-delay:600ms">d</span><span style="transition-delay:650ms">o</span><span
-                      style="transition-delay:700ms">r</span>
-                  </label>
+                  <label for="player-name">Nome do jogador</label>
+                  <input id="player-name" name="nome" type="text" required maxlength="20" autocomplete="nickname" class="myInput" aria-describedby="name-help">
+                  <small id="name-help">Até 20 caracteres.</small>
                 </div>
+                <label for="level">Nível</label>
+                <select id="level" name="nivel">
+                  <option value="facil">Fácil — 6 pares</option>
+                  <option value="medio">Médio — 10 pares</option>
+                  <option value="dificil">Difícil — 15 pares</option>
+                </select>
+                <p id="form-error" role="alert"></p>
                 <button type="submit" class="login_button">Jogar</button>
-                <script src="index.html">
-                </script>
+                <section class="records" aria-labelledby="records-title">
+                  <h2 id="records-title">Seus recordes</h2>
+                  <p id="record-facil"></p><p id="record-medio"></p><p id="record-dificil"></p>
+                </section>
               </form>
 
             </div>
             <div class="entrada hidden"></div>
           </div>
-        </div>
+        </main>
 
       <!--Waves Container-->
       <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg aria-hidden="true" class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -69,7 +71,7 @@
     <!--Content starts-->
     <footer>
       <div class="content">
-        <p><a href="https://github.com/KAYOKG" target="_blank"><img class="github" src="img/github.svg"></a>
+        <p><a href="https://github.com/KAYOKG" target="_blank"><img class="github" src="img/github.svg" alt="GitHub do autor"></a>
         </p>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
   <head>
     <meta charset="UTF-8">
@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gameStyle.css">
     <link rel="icon" href="img/logo.svg">
-    <title>Jogo da Memória</title>
+    <title>Jogo da Memória — encontre os pares</title>
+    <meta name="description" content="Encontre os pares de cartas, acompanhe seu tempo e suas jogadas e supere seu recorde em cada nível.">
     <script defer src="game.js"></script>
   </head>
 
@@ -16,15 +17,35 @@
 
       <div class="inner-header">
         <div class="titulo">
-          <img class="logo" src="img/logo.svg">
+          <img class="logo" src="img/logo.svg" alt="">
           <h1>Jogo da Memória</h1>
         </div>
       </div>
 
-      <div class="grid"></div>
+      <main class="game-area">
+        <div class="toolbar" aria-label="Informações da partida">
+          <p><strong id="player"></strong> · <span id="level-name"></span></p>
+          <p>Tempo <strong id="timer">00:00</strong></p>
+          <p>Jogadas <strong id="moves">0</strong></p>
+          <button type="button" id="restart">Reiniciar</button>
+          <a href="index.html">Trocar nível</a>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div class="grid" role="group" aria-label="Cartas do jogo"></div>
+      </main>
+      <dialog id="victory" aria-labelledby="victory-name" aria-describedby="victory-result victory-record">
+        <button type="button" id="close-victory" class="close-dialog" aria-label="Fechar resultado">×</button>
+        <h2 id="victory-name"></h2>
+        <p id="victory-result"></p>
+        <p id="victory-record"></p>
+        <div class="dialog-actions">
+          <button type="button" id="play-again" autofocus>Jogar de novo</button>
+          <a href="index.html">Trocar nível</a>
+        </div>
+      </dialog>
 
       <div class="divFooter">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg aria-hidden="true" class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -37,12 +58,12 @@
           </g>
         </svg>
         <div class="content">
-          <p><a href="https://github.com/KAYOKG/Jogo-da-Memoria" target="_blank"><img class="github" src="img/github.svg"></a></p>
+          <p><a href="https://github.com/KAYOKG/Jogo-da-Memoria" target="_blank"><img class="github" src="img/github.svg" alt="Repositório no GitHub"></a></p>
         </div>
       </div>
 
     </div>
   </body>
-  <script src="index.js"></script>
+
 
 </html>
